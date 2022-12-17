@@ -44,6 +44,9 @@ public class articulos {
 	private String youtuberTrailerID;
 	
 	private String rutaPortada;
+
+	@NotBlank
+	private String precio;
 	 
 	@NotEmpty
 	@ManyToMany(fetch=FetchType.LAZY)
@@ -59,6 +62,13 @@ public class articulos {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+	public String getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(String precio) {
+		this.precio = precio;
 	}
 
 	public String getTitulo() {
@@ -123,10 +133,11 @@ public class articulos {
 
 	public articulos(Integer id, @NotBlank String titulo, @NotBlank String sinopsis, @NotNull LocalDate fechaEstreno,
 			@NotBlank String youtuberTrailerID, String rutaPortada, @NotEmpty List<categoria> categorias,
-			MultipartFile portada) {
+			MultipartFile portada, @NotBlank String precio) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
+		this.precio = precio;
 		this.sinopsis = sinopsis;
 		this.fechaEstreno = fechaEstreno;
 		this.youtuberTrailerID = youtuberTrailerID;
@@ -137,10 +148,11 @@ public class articulos {
 
 	public articulos(@NotBlank String titulo, @NotBlank String sinopsis, @NotNull LocalDate fechaEstreno,
 			@NotBlank String youtuberTrailerID, String rutaPortada, @NotEmpty List<categoria> categorias,
-			MultipartFile portada) {
+			MultipartFile portada,  @NotBlank String precio) {
 		super();
 		this.titulo = titulo;
 		this.sinopsis = sinopsis;
+		this.precio = precio;
 		this.fechaEstreno = fechaEstreno;
 		this.youtuberTrailerID = youtuberTrailerID;
 		this.rutaPortada = rutaPortada;

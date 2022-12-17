@@ -26,6 +26,7 @@
 				
 				<div class="card-body">
 					<h2 class="card-title fs-6" th:text="*{titulo}"></h2>
+					<h2 class="card-title fs-6" >S/ <span th:text="*{precio}"></span></h2> 
 					<p th:text="*{#temporals.format(fechaEstreno,'dd/MM/yyyy')}" class="text-muted small"></p>
 				</div>
 				</a>

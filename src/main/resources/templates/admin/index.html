@@ -46,6 +46,7 @@
 						</td>
 						<td>
 							<div th:text="*{titulo}" class="fs-5 fw-bold"></div>
+							<div  class="fs-5 fw-bold"> S/<span th:text="*{precio}"></span></div>
 							<p th:text="*{sinopsis}"></p>
 							<div>
 								<span class="badge rounded-pill bg-light text-dark me-1" th:each="categoria:*{categorias}" th:text="${categoria.titulo}"></span>

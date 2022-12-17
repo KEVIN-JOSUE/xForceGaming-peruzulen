@@ -89,6 +89,7 @@ public class AdminControlador {
 		}
 		articulos articuloDB =articlerepositorio.getOne(id);
 		articuloDB.setTitulo(articulo.getTitulo());
+		articuloDB.setPrecio(articulo.getPrecio());
 		articuloDB.setSinopsis(articulo.getSinopsis());
 		articuloDB.setFechaEstreno(articulo.getFechaEstreno());
 		articuloDB.setYoutuberTrailerID(articulo.getYoutuberTrailerID());
